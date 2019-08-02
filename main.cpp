@@ -1,5 +1,6 @@
 #include <string>
 #include <tcp.h>
+#include <udp.h>
 int main (int argc, char** argv)
 {
     bool udp = false;
@@ -15,12 +16,20 @@ int main (int argc, char** argv)
             case 'c' : connect = true; break;
         }
     }
-    if(server)
+    if (udp)
     {
-        tcp_server();
+        if(server)
+            udp_server();
+        else
+            udp_client();
+
     }
     else
     {
-        tcp_client();
+        if (server)
+            tcp_server();
+        else
+            tcp_client();
     }
+
 }

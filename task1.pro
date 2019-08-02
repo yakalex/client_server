@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
-        tcp.cpp
+        tcp.cpp \
+        udp.cpp
 
 HEADERS += \
-    tcp.h
+    tcp.h \
+    udp.h
