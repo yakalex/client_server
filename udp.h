@@ -7,8 +7,8 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-void udp_client ();
+void udp_client (bool is_connect);
 
-void udp_server ();
+void udp_server (bool is_connect);
 
 #endif // UDP_H

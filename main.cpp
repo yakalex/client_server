@@ -19,9 +19,9 @@ int main (int argc, char** argv)
     if (udp)
     {
         if(server)
-            udp_server();
+            udp_server(connect);
         else
-            udp_client();
+            udp_client(connect);
 
     }
     else
