@@ -74,8 +74,8 @@ void udp_server (bool is_connect)
         if (is_connect)
         {
             connect(MasterSocket, reinterpret_cast<struct sockaddr *> (&SlaveSockAddr), sizeofSlaveSockAddr);
-            send(MasterSocket, &sizeofSlaveSockAddr, sizeof(unsigned int),MSG_NOSIGNAL);//, reinterpret_cast<struct sockaddr *> (&SlaveSockAddr), sizeofSlaveSockAddr);
-            send(MasterSocket, reinterpret_cast<void *>(&SlaveSockAddr),sizeofSlaveSockAddr,MSG_NOSIGNAL);//, reinterpret_cast<struct sockaddr *> (&SlaveSockAddr), sizeofSlaveSockAddr);
+            send(MasterSocket, &sizeofSlaveSockAddr, sizeof(unsigned int),MSG_NOSIGNAL);
+            send(MasterSocket, reinterpret_cast<void *>(&SlaveSockAddr),sizeofSlaveSockAddr,MSG_NOSIGNAL);
             close(MasterSocket);
             MasterSocket = socket(
                 AF_INET,
